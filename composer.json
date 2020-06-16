@@ -1,0 +1,23 @@
+{
+    "name": "skrip42/mac-address",
+    "description": "mac address helper",
+    "keywords": ["macaddress"],
+    "homepage": "https://github.com/Skrip42/MaxAddress",
+    "version": "v1.0",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "skrip",
+            "email": "skrip42@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "7.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Skrip42\\MacAddress\\":""
+        }
+    }
+}
