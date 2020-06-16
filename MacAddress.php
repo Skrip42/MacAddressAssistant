@@ -125,9 +125,29 @@ class MacAddress
         return static::isHex($macAddress) || static::isDec($macAddress);
     }
 
+    public function to6colon() : string
+    {
+        return $this->toFormat(':', 6);
+    }
+
+    public function to6dash() : string
+    {
+        return $this->toFormat('-', 6, 'hex', true, true);
+    }
+
+    public function to3dot() : string
+    {
+        return $this->toFormat('.', 3);
+    }
+
+    public function to6dotDec() : string
+    {
+        return $this->toFormat('.', 6, false);
+    }
+
     public function toFormat(
-        string $delimiter = ':',
-        int $partCount = 6,
+        string $delimiter,
+        int $partCount,
         string $mode = 'hex',
         bool $full = true,
         bool $upper = false,
